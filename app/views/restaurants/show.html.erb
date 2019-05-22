@@ -1,0 +1,25 @@
+<div class="container my-5">
+  <div class="row d-flex justify-content-center">
+    <div class="col-6 card m-1 p-3">
+      <div class="text-secondary">
+        <h2 class="text-center"><%= @restaurant.name%></h2>
+          <hr>
+        <div class="text-center">
+        <p><%= @restaurant.category%></p>
+        <p><%= @restaurant.address%></p>
+        <p><%= @restaurant.phone_number%></p>
+        <% @restaurant.reviews.each do |review| %>
+        <hr>
+        <p><%= review.content %></p>
+        <p><%= review.rating %> stars</p>
+        </div>
+        <% end %>
+         <div class="text-right">
+        <%= link_to 'Add Review', restaurants_path, class: "btn btn-primary rounded" %>
+        <%= link_to 'List', restaurants_path, class: "btn btn-outline-primary rounded" %>
+        </div>
+      </div>
+     </div>
+   </div>
+
+</div>
