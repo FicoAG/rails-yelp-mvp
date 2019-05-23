@@ -1,7 +1,20 @@
 <div class="container my-5">
+  <div class="row d-flex justify-content-center text-center">
+     <div class="col-5 card m-1 p-3">
+      <h4 class="text-secondary">Reviewing</h4>
+      <h2 class="text-secondary"><%= @restaurant.name%></h2>
+      <hr>
+       <div class="container text-secondary text-left">
+           <div class="form-inputs">
 <%= simple_form_for [@restaurant, @review] do |f| %>
   <%= f.input :content %>
   <%= f.input :rating %>
-  <%= f.submit "add a review", class: "btn btn-primary" %>
+  <div class="text-right">
+  <%= f.submit "add a review", class: "text-white btn btn-primary" %>
+  <%= link_to 'List', restaurants_path, class: "btn btn-outline-primary rounded" %>
+   </div>
+    </div>
   <% end %>
+    </div>
+  </div>
 </div>

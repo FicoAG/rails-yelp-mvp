@@ -1,24 +1,24 @@
 <div class="container my-5">
   <div class="row d-flex justify-content-center text-center">
-    <div class="col-5 card m-1 p-3">
+     <div class="col-5 card m-1 p-3">
       <h2 class="text-secondary">New Restaurant</h2>
       <hr>
-      <%= simple_form_for(@restaurant) do |f| %>
+       <%= simple_form_for(@restaurant) do |f| %>
         <%= f.error_notification %>
         <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
         <div class="container text-secondary text-left">
            <div class="form-inputs">
-            <%= f.input :name %>
-            <%= f.input :address %>
-            <%= f.input :category %>
-            <%= f.input :phone_number %>
-          </div>
+          <%= f.input :name %>
+          <%= f.input :address %>
+          <%= f.input :category %>
+          <%= f.input :phone_number %>
         </div>
+    </div>
       <div class="text-right">
-        <div class="form-actions btn btn-sm btn-outline-primary text-secondary">
-          <%= f.button :submit %>
+        <div class="form-actions">
+          <%= f.button :submit, class: "text-white btn btn-primary" %>
+          <%= link_to 'List', restaurants_path, class: "btn btn-outline-primary rounded" %>
         </div>
-
       </div>
 <% end %>
     </div>

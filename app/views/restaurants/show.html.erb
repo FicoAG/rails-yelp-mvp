@@ -15,7 +15,7 @@
         </div>
         <% end %>
          <div class="text-right">
-        <%= link_to 'Add Review', restaurants_path, class: "btn btn-primary rounded" %>
+        <a class="btn btn-primary rounded"href="/restaurants/<%= @restaurant.id%>/reviews/new">Add Review</a>
         <%= link_to 'List', restaurants_path, class: "btn btn-outline-primary rounded" %>
         </div>
       </div>

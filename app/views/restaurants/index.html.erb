@@ -1,4 +1,4 @@
-<div class="container m-3">
+<div class="container my-5">
   <h2 class="text-center text-secondary"> List of Restaurants</h2>
   <div class="text-right">
   <%= link_to 'Add Restaurant', new_restaurant_path, class: "btn btn-primary" %>
@@ -12,9 +12,7 @@
         <p><%= restaurant.category %></p>
         <p><%= restaurant.address %></p>
         <p><%= restaurant.phone_number %></p>
-      </div>
-      <div>
-        <%= link_to 'Details', restaurant_path(restaurant), class: "btn btn-outline-primary btn-sm font-weight-lighter" %>
+        <%= link_to 'Details', restaurant_path(restaurant), class: "btn btn-outline-primary rounded" %>
       </div>
     </div>
   <% end %>
